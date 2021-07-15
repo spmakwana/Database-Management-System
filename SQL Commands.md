@@ -37,6 +37,22 @@
   * Commands which are used to quering (reading/fetching) data from database/tables/view etc are kown as Data Query Language
   * e.g. Select
 
+## Data Types on Oracle
+* CHARACTER/STRING Datatype
+	* CHAR
+	* VARCHAR2 and VARCHAR and NVARCHAR2
+	* LONG 
+* NUMERIC Datatypes
+	* NUMBER
+* DATE Datatypes
+	* DATE
+* Binary Datatypes
+	* BLOB
+	* BFILE
+	* RAW
+	* LONG RAW 
+
+
 ## Create Tables
 Tables are the fundamental structure in database to store the data. Table compromises of rows and columns. Each column a data value which is to be stored, and each row represents one record of that table.
 
