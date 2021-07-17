@@ -4,6 +4,14 @@ Diploma Computer Engineering
 
 Prof. Sumit P. Makwana
 
+- [Course Objective](#course-objective)
+- [Course Outcome](#course-outcome)
+- [Pre-requisite](#pre-requisite)
+- [Teaching Scheme and Examination](#teaching-scheme-and-examination)
+- [Course Content](#course-content)
+  * [Course Contents (Theory)](#course-contents--theory-)
+  * [Course Content (Practical)](#course-content--practical-)
+
 # Course Objective
 A major rationale of a database system is to provide users with an intangible view of the data. That is, the system conceals certain details of how the information are put away and maintained. Thereby, data can be stored in compound data structures that permit competent retrieval, yet users see a basic and easy-to-use view of the data. The lowest level of abstraction, the physical level, depicts how the information are really put away and details the data structures.
 
@@ -28,12 +36,11 @@ None
 	* Lab work and other given work
 
 # Course Content
-
-* **Course Contents (Theory)**
-	* Database System and Data Models
-	* Relational Data Model
-	* Entity Relationship Data Model
-	* Relational Database Design
-	* SQL Concept
-* **Course Content (Practical)**
-	* Practical of SQL (Structured Query Language) using online/offline oracle database
+## Course Contents (Theory)
+* Database System and Data Models
+* Relational Data Model
+* Entity Relationship Data Model
+* Relational Database Design
+* SQL Concept
+## Course Content (Practical)
+* Practical of SQL (Structured Query Language) using online/offline oracle database
