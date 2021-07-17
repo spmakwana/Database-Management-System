@@ -1,8 +1,5 @@
 # SQL Commands
 
-[TOCM]
-
-
 # What is SQL
 
 *	SQL stands for Structured Query Language
