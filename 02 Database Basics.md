@@ -1,6 +1,11 @@
 # Database Basics
 ## Table of Contents
-
+- [What is Data?](#what-is-data-)
+- [Importance of Data](#importance-of-data)
+- [What is Information?](#what-is-information-)
+- [What is Database](#what-is-database)
+- [What is DBMS?](#what-is-dbms-)
+- [Application of DBMS](#application-of-dbms)
 
 # What is Data?
 * Facts which can be recorded or stored.
