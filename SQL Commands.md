@@ -67,7 +67,7 @@ Tables can be created using Create command
 
 **Syntax**
 ```sql
-    create table table name
+    create table tablename
     (column1name datatype(size),
     column2name datatype(size),
     column3name datatype(size),...)
