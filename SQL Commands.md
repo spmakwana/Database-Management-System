@@ -59,7 +59,7 @@ Tables are the fundamental structure in database to store the data. Table compro
 Tables can be created using Create command
 
 **Syntax**
-````
+```sql
     create table table name
     (column1name datatype(size),
     column2name datatype(size),
@@ -67,9 +67,40 @@ Tables can be created using Create command
 ````
 
 **Example**
-````
+```sql
     create table product
     (name varchar2(50),
     price number(10,2),
     description varchar2(150))
 ````
+
+# Inserting Data into Tables
+We can insert the data into table using insert query.
+
+**Syntax**
+``` sql
+insert into tablename (colname, colname, colname, ...) values (value, value, value)
+```
+**Example**
+```sql
+insert into product (name, price, description) values ('Laptop', '59999', "Laptop with i5 Processor and 4GB RAM')
+```
+If we do not want to enter data into all columns we can do it by skipping the column name in the query.
+E.g. in below query we have not written description column and its value, as we do not want to enter the value of description.
+```sql
+insert into product (name, price) values ('Laptop', '59999')
+```
+
+Note if we want to insert data into all columns of the table we can skip the column names.
+
+**Syntax**
+```sql
+insert into tablename values (value1, value2, value3, ...)
+```
+Above systanx only work when we want to enter data in all columns of the table. Also the sequence of the value should be same as column sequence.
+
+**Example**
+```sql
+insert into product values ('Laptop', '59999', "Laptop with i5 Processor and 4GB RAM')
+```
+
