@@ -1,4 +1,11 @@
 # SQL Commands
+## Table of Contents
+- [What is SQL](#what-is-sql)
+- [What SQL can do?](#what-sql-can-do-)
+- [Categories of SQL Command](#categories-of-sql-command)
+- [Data Types on Oracle](#data-types-on-oracle)
+- [Create Tables](#create-tables)
+- [Inserting Data](#inserting-data)
 
 # What is SQL
 
@@ -74,7 +81,7 @@ Tables can be created using Create command
     description varchar2(150))
 ````
 
-# Inserting Data into Tables
+# Inserting Data
 We can insert the data into table using insert query.
 
 **Syntax**
