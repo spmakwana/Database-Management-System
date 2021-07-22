@@ -15,7 +15,7 @@
 * E.g. text file, doc file, spreadsheet etc.
 * We can organize this files in our hard drive using file system.
 
-! [File System Diagram](https://github.com/spmakwana/Database-Management-System/blob/65d080cd82921144bceae706fa0736b38b25b7c2/assests/images/file%20system.png)
+![File System Diagram](https://github.com/spmakwana/Database-Management-System/blob/65d080cd82921144bceae706fa0736b38b25b7c2/assests/images/file%20system.png)
 
 ## File System (Advantages)
 * Easily create text files, doc files, spreadsheet etc to store the various types of data.
@@ -36,7 +36,7 @@
 * We can also store the data into Database Management System.
 * Here also files of Database is stored in the Hard disk
 
-! [DBMS File System Diagram](https://github.com/spmakwana/Database-Management-System/blob/65d080cd82921144bceae706fa0736b38b25b7c2/assests/images/file%20system%20dbms.png)
+![DBMS File System Diagram](https://github.com/spmakwana/Database-Management-System/blob/65d080cd82921144bceae706fa0736b38b25b7c2/assests/images/file%20system%20dbms.png)
 
 ## DBMS (Advantages)
 * Easy to handle large amount of data.
