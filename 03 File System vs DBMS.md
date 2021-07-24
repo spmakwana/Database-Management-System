@@ -1,3 +1,17 @@
+## Table of Contents
+
+- [What is DBMS?](#what-is-dbms-)
+- [Where to Store Data & Information](#where-to-store-data---information)
+- [File System](#file-system)
+  * [File System (Advantages)](#file-system--advantages-)
+  * [File System (Disadvantages)](#file-system--disadvantages-)
+- [DBMS](#dbms)
+  * [DBMS (Advantages)](#dbms--advantages-)
+  * [DBMS (Advantages)](#dbms--advantages--1)
+- [Popular DBMS](#popular-dbms)/
+
+# Database vs File System
+
 # What is DBMS?
 * A general purpose software system enabling:
 * Creation of large disk-resident databases.
@@ -7,15 +21,15 @@
 * Guaranteed availability of data irrespective of system failures
 
 # Where to Store Data & Information
-* Operating System based File System
-* DBMS
+* Data can be stored Operating System based File System by writing custom programs in different programming language.
+* Or database management system software can be used to store the data.
 
-## File System
+# File System
 * We can store data & information into various files
 * E.g. text file, doc file, spreadsheet etc.
 * We can organize this files in our hard drive using file system.
 
-![File System Diagram](https://github.com/spmakwana/Database-Management-System/blob/65d080cd82921144bceae706fa0736b38b25b7c2/assests/images/file%20system.png)
+![File System Diagram](https://raw.githubusercontent.com/spmakwana/Database-Management-System/65d080cd82921144bceae706fa0736b38b25b7c2/assests/images/file%20system.png)
 
 ## File System (Advantages)
 * Easily create text files, doc files, spreadsheet etc to store the various types of data.
@@ -32,12 +46,11 @@
 * Issues with concurrent access of data.
 * Have to write programs for each data operation. Can’t anticipate all kind of queries/request.
 
-## DBMS
+# DBMS
 * We can also store the data into Database Management System.
 * Here also files of Database is stored in the Hard disk
 
-![DBMS File System Diagram](https://github.com/spmakwana/Database-Management-System/blob/65d080cd82921144bceae706fa0736b38b25b7c2/assests/images/file%20system%20dbms.png)
-
+![DBMS File System Diagram](https://raw.githubusercontent.com/spmakwana/Database-Management-System/master/assests/images/file%20system%20dbms.png)
 ## DBMS (Advantages)
 * Easy to handle large amount of data.
 * Less probability of data inconsistency.
