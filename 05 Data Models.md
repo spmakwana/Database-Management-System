@@ -84,6 +84,7 @@
 - All objects have multiple relationships between them.
 
 ![Object Oriented Data Model](https://user-images.githubusercontent.com/4832630/127730078-37c66a52-3222-424a-920d-21a7933bf965.png)
+
 Image Source: https://www.geeksforgeeks.org/basic-object-oriented-data-model
 
 # NoSQL Database model
