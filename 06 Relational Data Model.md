@@ -20,8 +20,8 @@
 - **Table (Relation):** A database object that holds a collection of data for a specific topic. Table consist of rows and columns.
 - **Column (Attribute):** The vertical component of a table. A column has a name and a particular data type; e.g. varchar, decimal, integer, datetime etc.
 - **Row (Record / Tuple):** The horizontal component of a table, consisting of a sequence of values, one for each column of the table. It is also known as row / record / tuple.
-- **Cardinality: ** Number of row in any table is called Cardinality. For example, in above table cardinality is 7
-- **Domain: ** Domain is set of possible unique value in any particular column. For example, in above table, domain of branch attribute is (CE, IT, ME, EE)
+- **Cardinality:** Number of row in any table is called Cardinality. For example, in above table cardinality is 7
+- **Domain:** Domain is set of possible unique value in any particular column. For example, in above table, domain of branch attribute is (CE, IT, ME, EE)
 
 
 
@@ -110,7 +110,7 @@ $$
 
 ![Sample Table](https://user-images.githubusercontent.com/4832630/128292726-bc480b99-108c-41ac-a0fd-2ac69b6c6a5d.png)
 
-Table 1.2 - Sample Table
+> Table 1.2 - Sample Table
 
 Table 1.2 has below super keys 
 
@@ -124,7 +124,7 @@ But not all above super key is considered as candidate key as we can see in belo
 
 ![Candidate Key](https://user-images.githubusercontent.com/4832630/128292990-bb253624-ba81-47c2-943b-c067cf7f808b.png)
 
-Table 1.3 Candidate Key
+> Table 1.3 Candidate Key
 
 # Primary Key
 
