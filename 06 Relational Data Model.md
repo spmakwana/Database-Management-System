@@ -86,19 +86,14 @@ For table with n column, maximum no of super key can be
 $$
 Max No Of Super Key = 2^𝑛−1
 $$
-For example table with 3 column
+For example table with 3 column: 
 $$
-Max No Of Super Key = 2^𝑛−1
-$$
-$$
-Max No Of Super Key = 2^3−1
+MaxNoOfSuperKey = 2^3 -1 = 7
 $$
 $$
-Max No Of Super Key = 8−1
+MaxNoOfSuperKey = 7
 $$
-$$
-Max No Of Super Key = 7
-$$
+
 
 # Candidate Key
 

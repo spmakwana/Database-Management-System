@@ -81,7 +81,7 @@ Tables can be created using Create command
     description varchar2(150))
 ````
 
-# Inserting Data
+# Insert Data
 We can insert the data into table using insert query.
 
 **Syntax**
@@ -110,4 +110,86 @@ Above systanx only work when we want to enter data in all columns of the table. 
 ```sql
 insert into product values ('Laptop', '59999', "Laptop with i5 Processor and 4GB RAM')
 ```
+
+# Select Data
+
+We can select (fetch) the data from table using select query. 
+
+**Syntax**
+
+```sql
+select * from tablename
+```
+
+**Example**
+
+```sql
+select * from product
+```
+
+Above example will fetch all the records and all the attributes (columns) from the table product.
+
+## Select selective attributes (columns)
+
+**Syntax**
+
+```sql
+select columnname, columnname, ... from tablename
+```
+
+Instead of writing * sign we can specify the list of attributes separated by comma to fetch only selective attributes from the table.
+
+**Example**
+
+```sql
+select name, price from product
+```
+
+Above example will fetch only name, and price attributes from the table product.
+
+## Select selective records (rows)
+
+**Syntax**
+
+```sql
+select * from tablename where condition
+```
+
+Instead of writing * sign we can specify the list of attributes separated by comma to fetch only selective attributes from the table. We can use any conditional operator (=, <, <=, >, >=, <>) to make any condition and also use any logical operator (and, or, not) to combine multiple conditions.
+
+**Example**
+
+```sql
+select * from product where price > 5000
+```
+
+Above example will fetch those records whose price is greater than 5000.
+
+```sql
+select * from product where price < 50000 and name = 'Laptop'
+```
+
+Above example will fetch those records whose price is greater than 5000 and product name is Laptop.
+
+## Select selective attributes (columns) and selective records (rows)
+
+We can combine above two syntax to select selective attributes and selective records.
+
+**Syntax**
+
+```sql
+select columnname, columnname, ... from tablename where condition
+```
+
+Instead of writing * sign we can specify the list of attributes separated by comma to fetch only selective attributes from the table.
+
+**Example**
+
+```sql
+select name from product where price > 10000
+```
+
+Above example will records whose price is greater than 10000 and will only display name attribute.
+
+
 
