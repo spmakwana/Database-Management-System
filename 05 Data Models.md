@@ -1,4 +1,4 @@
-## Table of Contents
+# Table of Contents
 
 - [What is Data model?](#what-is-data-model-)
   * [Type of Data models](#type-of-data-models)
@@ -37,7 +37,9 @@
 - This model was mostly used in IBM’s Information Management System in early 60s and 70s.
 - This model is not used much in present day.
 
-![Hierarchical model](https://user-images.githubusercontent.com/4832630/127729717-404dea84-9181-40b5-9b23-7d928ef04bc5.png)
+![Hierarchical_model](images/Hierarchical_model.png)
+
+> Hierarchical model
 
 # Network Model
 
@@ -46,7 +48,9 @@
 - In Hierarchical model any record only can have a single parent, but in Network model record can have multiple parents.
 - Hence it allows complex relationships. 
 
-![Network Model](https://user-images.githubusercontent.com/4832630/127729746-8785f58b-3e17-4709-afa5-b29295f5ad44.png)
+![Network_Model](images/Network_Model.png)
+
+> Network Model
 
 # Relational model
 
@@ -60,7 +64,9 @@
 - Most used model in current time.
 - This type of database generally uses SQL (Structured Query Language) to read/write the data.
 
-![Relational Model](https://user-images.githubusercontent.com/4832630/127729884-dd2c4009-775d-4b6e-a20d-fcf62aa6f81c.png)
+![Relational_Model](images/Relational_Model.png)
+
+> Relational Model
 
 # Entity Relationship Model
 
@@ -70,9 +76,11 @@
 - Attributes represents the data about the entity.
   - E.g. name, enrolment no, salary, address, organization etc.
 - Generally relational data model is constructed from the ER Model.
-- In ER model entity is represented using rectangle, attributes are represented using ellipse and relationships are represented using dimond shape.
+- In ER model entity is represented using rectangle, attributes are represented using ellipse and relationships are represented using Dimond shape.
 
-![Entity Relationship Model](https://user-images.githubusercontent.com/4832630/127729944-ac4eff33-cc75-45f0-b1ad-9cb47b245663.png)
+![E_R_Model](images/E_R_Model.png)
+
+> Entity Relationship Model (E R Model)
 
 # Object Oriented Database model
 
@@ -83,9 +91,11 @@
 - In this, real world problems are represented as objects with different attributes. 
 - All objects have multiple relationships between them.
 
-![Object Oriented Data Model](https://user-images.githubusercontent.com/4832630/127730078-37c66a52-3222-424a-920d-21a7933bf965.png)
+![Object_Oriented_Data_Model](images/Object_Oriented_Data_Model.png)
 
-Image Source: https://www.geeksforgeeks.org/basic-object-oriented-data-model
+> Object Oriented Data Model. 
+>
+> Image Source: https://www.geeksforgeeks.org/basic-object-oriented-data-model
 
 # NoSQL Database model
 

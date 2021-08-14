@@ -1,3 +1,4 @@
+# Database vs File System
 ## Table of Contents
 
 - [What is DBMS?](#what-is-dbms-)
@@ -8,9 +9,8 @@
 - [DBMS](#dbms)
   * [DBMS (Advantages)](#dbms--advantages-)
   * [DBMS (Advantages)](#dbms--advantages--1)
-- [Popular DBMS](#popular-dbms)/
+- [Popular DBMS](#popular-dbms)
 
-# Database vs File System
 
 # What is DBMS?
 * A general purpose software system enabling:
@@ -29,10 +29,12 @@
 * E.g. text file, doc file, spreadsheet etc.
 * We can organize this files in our hard drive using file system.
 
-![File System Diagram](https://raw.githubusercontent.com/spmakwana/Database-Management-System/65d080cd82921144bceae706fa0736b38b25b7c2/assests/images/file%20system.png)
+![file system](images/file%20system.png)
+
+> File System Diagram. All files have to be managed by user.
 
 ## File System (Advantages)
-* Easily create text files, doc files, spreadsheet etc to store the various types of data.
+* Easily create text files, doc files, spreadsheet etc. to store the various types of data.
 * Easy to manage by using Interface (File explorer) provided by Operating System. 
 * Only good for small amount of data.
 
@@ -50,7 +52,10 @@
 * We can also store the data into Database Management System.
 * Here also files of Database is stored in the Hard disk
 
-![DBMS File System Diagram](https://raw.githubusercontent.com/spmakwana/Database-Management-System/master/assests/images/file%20system%20dbms.png)
+![file system dbms](images/file%20system%20dbms.png)
+
+> Database file management Diagrams. All database files are managed by DBMS software itself, no user involvement is necessory.
+
 ## DBMS (Advantages)
 * Easy to handle large amount of data.
 * Less probability of data inconsistency.
@@ -59,9 +64,8 @@
 * Possible to validate data.
 * Easy to query the data.
 * More secure compared to file system.
-* No need to write separate program for data management and data retrival.
+* No need to write separate program for data management and data retrieval.
 
-## DBMS (Advantages)
 * Data Access Language
 * Standardized Language (SQL - Structured Query Language)
 * Hence querying the data is easier.
@@ -78,3 +82,4 @@
 * Oracle
 * Microsoft Access
 * MongoDB
+* SQLite

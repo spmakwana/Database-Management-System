@@ -1,4 +1,4 @@
-## Table of Contents
+# Table of Contents
 - [Characteristics of DBMS](#characteristics-of-dbms)
   * [Data Redundancy](#data-redundancy)
   * [Data Consistency](#data-consistency)
@@ -92,7 +92,7 @@ There are 3 levels of data abstraction
 - Shows the relevant data inform of tables and views.
 - Different user can have different view of database according to the rights given to each user.
 
-![Data Abstraction Level](https://user-images.githubusercontent.com/4832630/126860036-f8508478-458a-4515-8f07-20b8c9765d3a.png)
+![Data_Abstraction_Level](images/Data_Abstraction_Level.png)
 
 # Data Independence
 
@@ -151,7 +151,9 @@ There are 3 levels of data abstraction
 - More user friendly as user only access the application which most of the time provides user friendly GUI to the user.
 - Performance is little bit less compared to 1 tire architecture as one more layer is added between user and database.
 
-![2 Tire Architecture](https://user-images.githubusercontent.com/4832630/126860124-a5d63609-0def-4707-a005-dfc3952f4d68.png)
+![2_Tire_Architecture](images/2_Tire_Architecture.png)
+
+> 2 Tire Architecture
 
 ## 3 Tire Architecture
 
@@ -178,7 +180,9 @@ There are 3 levels of data abstraction
 - Data tire provides different APIs to manipulate database information. 
 - These APIs are used by Application tire to access the database.
 
-![3 Tire Architecture](https://user-images.githubusercontent.com/4832630/126860167-062ea2f6-242f-4e4a-be52-df4158dc18b0.png)
+![3_Tire_Architecture](images/3_Tire_Architecture.png)
+
+> 3 Tire Architecture
 
 # Roles of Database Administrator (DBA)
 

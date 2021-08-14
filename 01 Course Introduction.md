@@ -1,8 +1,8 @@
 # Course: 09CE1302 - Database Management System
 
-Diploma Computer Engineering
+> Prof. Sumit P. Makwana
 
-Prof. Sumit P. Makwana
+# Table of Contents
 
 - [Course Objective](#course-objective)
 - [Course Outcome](#course-outcome)

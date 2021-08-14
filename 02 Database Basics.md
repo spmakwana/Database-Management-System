@@ -1,5 +1,4 @@
-# Database Basics
-## Table of Contents
+# Table of Contents
 - [What is Data?](#what-is-data-)
 - [Importance of Data](#importance-of-data)
 - [What is Information?](#what-is-information-)
