@@ -7,7 +7,7 @@
 - [Categories of SQL Command](#categories-of-sql-command)
 - [Data Types in Oracle](#data-types-in-oracle)
 - [Create Tables](#create-tables)
-- [Modify / Alter Table Structure](#modify---alter-table-structure)
+- [Modify / Alter Table Structure](#modify-/-alter-table-structure)
   * [Add Column to Table](#add-column-to-table)
   * [Remove Column from Table](#remove-column-from-table)
   * [Modify Column Datatype](#modify-column-datatype)
