@@ -1,6 +1,37 @@
-# Table of Contents
+# Table of contents
 
-[toc]
+- [What is SQL](#what-is-sql)
+- [What SQL can do?](#what-sql-can-do)
+- [Categories of SQL Command](#categories-of-sql-command)
+- [Data Types in Oracle](#data-types-in-oracle)
+- [Create Tables](#create-tables)
+- [Modify Table Structure](#modify-table-structure)
+  - [Add Column to Table](#add-column-to-table)
+  - [Remove Column from Table](#remove-column-from-table)
+  - [Modify Column Datatype](#modify-column-datatype)
+  - [Rename Column](#rename-column)
+  - [Rename Table](#rename-table)
+- [Insert Data](#insert-data)
+- [Select Data](#select-data)
+  - [Select all attributes (columns) and records (rows)](#select-all-attributes-columns-and-records-rows)
+  - [Select selective attributes (columns)](#select-selective-attributes-columns)
+  - [Select selective records (rows)](#select-selective-records-rows)
+  - [Select selective attributes (columns) and selective records (rows)](#select-selective-attributes-columns-and-selective-records-rows)
+- [Update Data](#update-data)
+- [Delete Data](#delete-data)
+- [SQL Constraints](#sql-constraints)
+- [NOT NULL Constraint](#not-null-constraint)
+  - [Apply NOT NULL constraint when creating a new table](#apply-not-null-constraint-when-creating-a-new-table)
+  - [Apply NOT NULL constraint on already created table](#apply-not-null-constraint-on-already-created-table)
+  - [Remove NOT NULL Constraint](#remove-not-null-constraint)
+- [UNIQUE Constraint](#unique-constraint)
+  - [Apply UNIQUE constraint when creating a new table](#apply-unique-constraint-when-creating-a-new-table)
+  - [Apply UNIQUE constraint on already created table](#apply-unique-constraint-on-already-created-table)
+  - [Remove UNIQUE Constraint](#remove-unique-constraint)
+- [PRIMARY KEY Constraint](#primary-key-constraint)
+  - [Apply PRIMARY KEY Constraint when creating a new table](#apply-primary-key-constraint-when-creating-a-new-table)
+  - [Apply PRIMARY KEY constraint on already created table](#apply-primary-key-constraint-on-already-created-table)
+  - [Remove PRIMARY KEY constraint](#remove-primary-key-constraint)
 
 # What is SQL
 

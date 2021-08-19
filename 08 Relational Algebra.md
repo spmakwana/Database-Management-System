@@ -2,9 +2,9 @@
 
 - [Relational Algebra](#relational-algebra)
   * [Operations in Relational Algebra](#operations-in-relational-algebra)
-- [SELECT (Symbol σ) (Sigma)](#select-(symbol-σ)-(sigma))
-- [PROJECT (Symbol Π) (Pi)](#project-(symbol-Π)-(pi))
-- [SELECT & PROJECT Combine Operation](#select-&amp;-project-combine-operation)
+- [SELECT Operation](#select-operation)
+- [PROJECT Operation](#project-operation)
+- [Combination of SELECT and PROJECT Operation](#combination-of-select-and-project-operation)
 
 # Relational Algebra
 
@@ -30,7 +30,7 @@
     - Full Outer Join
   - DIVISION
 
-# SELECT (Symbol σ) (Sigma)
+# SELECT Operation
 
 - **Symbol** : σ (SIGMA)
 
@@ -70,7 +70,7 @@ Above is the relation Student. Find below using Select operation
 
 ![image-20210818110243133](images/image-20210818110243133.png)
 
-# PROJECT (Symbol Π) (Pi)
+# PROJECT Operation
 
 - **Symbol:** Π (Pi)
 
@@ -108,7 +108,7 @@ Above is the relation Student. Find below using Project operation
 
 ![image-20210818114558557](images/image-20210818114558557.png)
 
-# SELECT & PROJECT Combine Operation
+# Combination of SELECT and PROJECT Operation
 
 We can also combine Select and Project operation as seen in below example.
 
