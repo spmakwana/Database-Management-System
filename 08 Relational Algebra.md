@@ -1,10 +1,13 @@
-# Table of Contents
+# Table of contents
 
 - [Relational Algebra](#relational-algebra)
-  * [Operations in Relational Algebra](#operations-in-relational-algebra)
+  - [Operations in Relational Algebra](#operations-in-relational-algebra)
 - [SELECT Operation](#select-operation)
 - [PROJECT Operation](#project-operation)
 - [Combination of SELECT and PROJECT Operation](#combination-of-select-and-project-operation)
+- [UNION Operation](#union-operation)
+- [INTERSECTION Operation](#intersection-operation)
+- [SET DIFFERENCE Operation](#set-difference-Operation)
 
 # Relational Algebra
 
@@ -17,17 +20,20 @@
 - Unary Relational Operation
   - SELECT (Symbol σ) (Sigma)
   - PROJECT (Symbol ∏) (Pi)
-- Operations from set theory
-  - UNION (Symbol ∪)
-  - INTERSECTION (Symbol ∩)
-  - DIFFERENCE (Symbol −)
-  - CARTESIAN PRODUCT (Symbol Χ)
+  
 - Binary Relational Operation
+
+  - Operations from set theory
+    - UNION (Symbol ∪)
+    - INTERSECTION (Symbol ∩)
+    - DIFFERENCE (Symbol −)
+    - CARTESIAN PRODUCT (Symbol Χ)
+
   - JOIN 
-    - Inner Join
-    - Left Outer Join
-    - Right Outer Join
-    - Full Outer Join
+    - Inner JOIN
+    - Left Outer JOIN
+    - Right Outer JOIN
+    - Full Outer JOIN
   - DIVISION
 
 # SELECT Operation
@@ -121,4 +127,84 @@ Display the Enrollno,Name and city of “IT” branch students.
 **Output Relation**
 
 ![image-20210818115155944](images/image-20210818115155944.png)
+
+# UNION Operation
+
+![image-20210819121453948](images/image-20210819121453948.png)
+
+- **Operation:** Operation of Union in relational algebra is same as set theory union operation. It combines the tuples (records) of the both input relation. 
+- **Requirement:** Union must be taken between compatible relations
+- Relation R and S are compatible, if
+  - Both have same number of attributes
+  - Domain of the attribute of R and S are similar
+
+**Example 1**
+
+![image-20210819122159546](images/image-20210819122159546.png)
+
+In above example we have two relation named 'r' and 's'. Output of R ∪ S will display all the records of relation r and relation after combining them. If there are some duplicate records it will remove the duplicate records
+
+**Example 2**
+
+![image-20210819122842881](images/image-20210819122842881.png)
+
+Above are two relation employee and relation that stores the detail of employee and student respectively.
+
+List all the students and faculties with their department.
+
+Here Employee relation and Student relation are not compatible relations. But the resultant relation of projection operator contains similar attribute with similar domain. So it is possible to apply union operation after applying such project operation even though the original relations are not compatible.
+
+![image-20210819123002173](images/image-20210819123002173.png)
+
+![image-20210819123032077](images/image-20210819123032077.png)
+
+# INTERSECTION Operation
+
+![image-20210819132042329](images/image-20210819132042329.png)
+
+- **Operation:** Selects the tuples (records) which are common in both the input relations.
+- **Requirement:** Union must be taken between compatible relations
+- Relation R and S are compatible, if
+  - Both have same number of attributes
+  - Domain of the attribute of R and S are similar
+
+**Example 1**
+
+![image-20210819132523637](images/image-20210819132523637.png)
+
+In above example we have two relation named 'r' and 's'. Output of R ∩ S will display only those records which are common in both the relation.
+
+**Example 2**
+
+![image-20210819132837311](images/image-20210819132837311.png)
+
+Above are two relation employee and relation that stores the detail of employee and student respectively.
+
+List all the employee who are also students.
+
+Here Employee relation and Student relation are not compatible relations. But the resultant relation of projection operator contains similar attribute with similar domain. So it is possible to apply intersection operation after applying such project operation even though the original relations are not compatible.
+
+![image-20210819133057271](images/image-20210819133057271.png)
+
+![image-20210819133119603](images/image-20210819133119603.png)
+
+# SET DIFFERENCE Operation
+
+- **Symbol:** - (minus sign)
+- **Notation:** Relation1_name - Relation2_name
+- **Operation: ** Returns all the records from relation1 (left relation) after removing the common records of relation1 and relation2.
+
+**Example**
+
+![image-20210819133925721](images/image-20210819133925721.png)
+
+Above are two relation employee and relation that stores the detail of employee and student respectively.
+
+List all the employee who are not students.
+
+Here Employee relation and Student relation are not compatible relations. But the resultant relation of projection operator contains similar attribute with similar domain. So it is possible to apply set difference operation after applying such project operation even though the original relations are not compatible.
+
+![image-20210819134127657](images/image-20210819134127657.png)
+
+![image-20210819134205969](images/image-20210819134205969.png)
 
