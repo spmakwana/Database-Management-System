@@ -94,6 +94,8 @@ There are 3 levels of data abstraction
 
 ![Data_Abstraction_Level](images/Data_Abstraction_Level.png)
 
+> Levels of Data Abstraction (Hierarchy of Data Abstraction Levels)
+
 # Data Independence
 
 - Main purpose of Data Abstraction is to achieve data independence to save time and cost required when data is modified or altered.

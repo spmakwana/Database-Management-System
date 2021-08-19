@@ -34,7 +34,7 @@
 
 - **Symbol** : σ (SIGMA)
 
-![image-20210818104159080](images/image-20210818104159080.png)
+![image-20210819101109443](images/image-20210819101109443.png)
 
 - **Operation:** Display particular tuples from a relation that satisfy a given condition (predicate) 
 - **Operators:** =, <>, <, >, <=, >=, ^ (AND), v (OR)
@@ -43,7 +43,7 @@
 
 - Select all account whose balance is greater then 100000 from relation SavingAaccount
 
-![image-20210818104300989](images/image-20210818104300989.png)
+![image-20210819100921515](images/image-20210819100921515.png)
 
 **Example 2**
 
@@ -68,13 +68,13 @@ Above is the relation Student. Find below using Select operation
 
 **Answers**
 
-![image-20210818110243133](images/image-20210818110243133.png)
+![image-20210819101549503](images/image-20210819101549503.png)
 
 # PROJECT Operation
 
 - **Symbol:** Π (Pi)
 
-![image-20210818110643960](images/image-20210818110643960.png)
+![image-20210819101720989](images/image-20210819101720989.png)
 
 - **Operation:** Selects specified attributes of a relation.
 - Project operation selects certain columns from a table while discarding others.
@@ -85,7 +85,7 @@ Above is the relation Student. Find below using Select operation
 
 List out all account number and name from SavingAccount relation
 
-![image-20210818110939744](images/image-20210818110939744.png)
+![image-20210819101815804](images/image-20210819101815804.png)
 
 **Example 2**
 
@@ -106,7 +106,7 @@ Above is the relation Student. Find below using Project operation
 
 **Answers**
 
-![image-20210818114558557](images/image-20210818114558557.png)
+![image-20210819102105782](images/image-20210819102105782.png)
 
 # Combination of SELECT and PROJECT Operation
 
@@ -116,7 +116,7 @@ We can also combine Select and Project operation as seen in below example.
 
 Display the Enrollno,Name and city of “IT” branch students.
 
-![image-20210818115050526](images/image-20210818115050526.png)
+![image-20210819102204016](images/image-20210819102204016.png)
 
 **Output Relation**
 
