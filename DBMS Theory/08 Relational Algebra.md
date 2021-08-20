@@ -208,3 +208,36 @@ Here Employee relation and Student relation are not compatible relations. But th
 
 ![image-20210819134205969](images/image-20210819134205969.png)
 
+# CROSS PRODUCT Operation
+
+CROSS PRODUCT Operation is also known as CARTESIAN PRODUCT Operation
+
+- **Symbol:** X (Cross)
+- **Notation:** Relation1_name  X Relation2_name
+- **Operation:** Combines information of two relations, It is also known as Cross-Product operation and similar to mathematical Cartesian Product Operation
+- **Result:** for Relation1 and Relation2 if they have n1 and n2 attributes respectively then resultant relation will have n1+n2 attributes, combining attributes from both the input relations 
+- If both relation have same name of attributes then they are distinguished using following notation.
+  - Relation_Name.Attribute_Name
+  - i.e. Relation1.n1 or Relation2.n1
+- If Relation1 has t1 tuples and Relation2 has t2 tuples then the resultant relation will have t1 * t2 tuples, combining each possible pair of tuples from both the relations.
+- In Short we can say,
+- Attributes of Resultant Relation =  Attributes of R1 + Attributes of R2
+- Tuples of Resultant Relation = Tuples of R1 * Tuples of R2
+
+**Example**
+
+![image-20210820085859489](images/image-20210820085859489.png)
+
+Above are two relation. Student relation have three attributes roll no, name and branch and two records. Result relation have two attribute roll no and SPI and two records. 
+
+- When we cross product these two relations 
+- The resultant relation will have total five attribute (Attributes of Student + Attributes of Result)
+- And will have total 4 records. (Records of Student x Records of Result) (Every records of student relation are matched with every records of the result relation.)
+
+![image-20210820090332927](images/image-20210820090332927.png)
+
+**Output Relation**
+
+![image-20210820090520001](images/image-20210820090520001.png)
+
+In above example both relation have same attribute RollNo so it is distinguished by notation Relation_name.Attribute_Name (i.e. Student.RollNo and Result.RollNo)
