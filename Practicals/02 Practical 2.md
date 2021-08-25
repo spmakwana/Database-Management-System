@@ -181,7 +181,7 @@ update installment set amount = '5000' where loan_no = 'L001'
 delete from installment where loan_no = 'L002'
 ```
 
-
+---
 
 # Queries of Transaction Table
 
