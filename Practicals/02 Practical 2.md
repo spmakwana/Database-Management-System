@@ -140,46 +140,94 @@ modify acc_no varchar2(7)
 1. Insert following Records if you have not inserted in PRACTICAL-1
 
    ![image-20210819154104696](images/image-20210819154104696.png)
-```sql
-
-```
 
 2. Change the Inst_Date ‘2-Feb-04’ to ’3-Mar-04’.
 ```sql
-
+update installment set inst_date = '03-03-2004' where inst_date = '02-02-2004'
 ```
 
 3. Reduce 5000 amount from all Installment holders.
 ```sql
-
+update installment set amount = amount - '5000'
 ```
 
 4. Add the amount 5000 where loan no is ‘L003’ and ‘L002’.
 ```sql
-
+update installment set amount = amount + '5000' where loan_no = 'L003' or loan_no = 'L002'
 ```
 
 5. Change the column size of 5 to 7 where column name is Loan_no.
 ```sql
-
+alter table installment modify loan_no varchar2(7)
 ```
 
 6. Decrease the column size 5 to 4 where column name Inst_no.
 ```sql
-
+alter table installment modify inst_no varchar2(4)
 ```
 
 7. Show the structure of the Table.
 ```sql
-
+desc installment
 ```
 
 8. Change the amount 15000 to 5000 where loan number is L001
 ```sql
-
+update installment set amount = '5000' where loan_no = 'L001'
 ```
 
 9. Perform delete operation. (Delete only particular one record)
 ```sql
+delete from installment where loan_no = 'L002'
+```
+
+
+
+# Queries of Transaction Table
+
+1. Insert a Following Records if you have not inserted in PRACTICAL-1
+
+![image-20210825121239506](images/image-20210825121239506.png)
 
 ```
+insert into transaction (acc_no, tr_date, amt, type_of_tr, mode_of_pay) values ('A001', '03-03-2004', '10000', 'D', 'Cash')
+insert into transaction (acc_no, tr_date, amt, type_of_tr, mode_of_pay) values ('A002', '07-05-2004', '5000', 'W', 'Cheque')
+insert into transaction (acc_no, tr_date, amt, type_of_tr, mode_of_pay) values ('A003', '08-12-2004', '25000', 'D', 'Cheque')
+insert into transaction (acc_no, tr_date, amt, type_of_tr, mode_of_pay) values ('A004', '05-15-2004', '30000', 'D', 'Cheque')
+insert into transaction (acc_no, tr_date, amt, type_of_tr, mode_of_pay) values ('A005', '10-22-2004', '15000', 'W', 'Cash')
+```
+
+2. Insert any duplicate value and display all the records without any duplicate rows.
+```sql
+select distinct * from transaction
+```
+
+3. Select all the records in descending order(account number wise).
+```sql
+select * from transaction order by acc_no desc
+```
+4. Display amt, date, and type of transaction by date wise.
+```sql
+select amt, tr_date, type_of_tr from transaction order by tr_date
+```
+5. Create another table TRANSACTION_TEMP from this table.
+```sql
+create table transaction_temp as select * from transaction
+```
+6. Create another table TRANS_TEMP by change the column name acc_no to account_no.
+```sql
+create table trans_temp as select acc_no as account_no, tr_date, amt, type_of_tr, mode_of_pay from transaction
+```
+7. Delete a table TRANSACTION_TEMP.
+```sql
+drop table transaction_temp;
+```
+8. Rename the table TRANSACTION to TRANS.
+```sql
+alter table transaction rename to trans
+```
+9. Display account number where type of transaction is ‘D’.
+```sql
+select acc_no from trans where type_of_tr = 'D'
+```
+
