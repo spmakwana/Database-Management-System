@@ -49,7 +49,6 @@
     - Left Outer JOIN
     - Right Outer JOIN
     - Full Outer JOIN
-  - DIVISION
 
 # SELECT Operation
 
