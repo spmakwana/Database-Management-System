@@ -1,6 +1,5 @@
 # Table of contents
 
-- [Table of contents](#table-of-contents)
 - [Relational Algebra](#relational-algebra)
   * [Operations in Relational Algebra](#operations-in-relational-algebra)
 - [SELECT Operation](#select-operation)
