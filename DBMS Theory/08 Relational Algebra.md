@@ -1,13 +1,29 @@
 # Table of contents
 
+- [Table of contents](#table-of-contents)
 - [Relational Algebra](#relational-algebra)
-  - [Operations in Relational Algebra](#operations-in-relational-algebra)
+  * [Operations in Relational Algebra](#operations-in-relational-algebra)
 - [SELECT Operation](#select-operation)
 - [PROJECT Operation](#project-operation)
 - [Combination of SELECT and PROJECT Operation](#combination-of-select-and-project-operation)
 - [UNION Operation](#union-operation)
 - [INTERSECTION Operation](#intersection-operation)
-- [SET DIFFERENCE Operation](#set-difference-Operation)
+- [SET DIFFERENCE Operation](#set-difference-operation)
+- [CROSS PRODUCT Operation](#cross-product-operation)
+- [Join](#join)
+  - [Natural Join - Inner Join](#natural-join---inner-join)
+  - [Left Outer Join](#left-outer-join)
+  - [Right Outer Join](#right-outer-join)
+  - [Full Outer Join](#full-outer-join)
+- [Relational Calculus](#relational-calculus)
+  * [Tuple Relational Calculus](#tuple-relational-calculus)
+  * [Domain Relational Calculus](#domain-relational-calculus)
+- [Aggregate Functions](#aggregate-functions)
+  * [Sum](#sum)
+  * [Max](#max)
+  * [Min](#min)
+  * [Avg](#avg)
+  * [Count](#count)
 
 # Relational Algebra
 
@@ -241,3 +257,233 @@ Above are two relation. Student relation have three attributes roll no, name and
 ![image-20210820090520001](images/image-20210820090520001.png)
 
 In above example both relation have same attribute RollNo so it is distinguished by notation Relation_name.Attribute_Name (i.e. Student.RollNo and Result.RollNo)
+
+# Join
+
+In Cross Product every records of left table are matched with every records of the right table. In cross product many records are inconsistent or the data is not correct.
+
+To get the consistent and correct data we can use join.
+
+There are four types of join
+
+- Natural Join (Inner Join)
+- Left Outer Join
+- Right Outer Join
+- Full Outer Join
+
+# Natural Join - Inner Join
+
+![image-20210826143359755](images/image-20210826143359755.png)
+
+**Operation:** Natural join will retrieve consistent data from multiple relations. It combines records from different relations that satisfy a given condition. To perform a natural join there must be one common attribute (column) between two relations.
+| Step     | Operation|
+|-----|-----|
+| Step 1 | It performs Cartesian Product                           |
+| Step 2 | Then it deletes inconsistent tuples                     |
+| Step 3 | Then it removes an attribute from  duplicate attributes |
+
+**Example 1** 
+
+![image-20210826143717211](images/image-20210826143717211.png)
+
+When we perform natural Join
+
+![image-20210826143815648](images/image-20210826143815648.png)
+
+![image-20210826143828168](images/image-20210826143828168.png)
+
+![image-20210826144039320](images/image-20210826144039320.png)
+
+![image-20210826144108976](images/image-20210826144108976.png)
+
+**Example 2**
+
+![image-20210826144202754](images/image-20210826144202754.png)
+
+When we perform natural Join
+
+![image-20210826144221309](images/image-20210826144221309.png)
+
+![image-20210826144325962](images/image-20210826144325962.png)
+
+![image-20210826144339160](images/image-20210826144339160.png)
+
+![image-20210826144350905](images/image-20210826144350905.png)
+
+# Left Outer Join
+
+In inner join, only the data which have matching records on either side is displayed. If some records do not have matching records the it will be ommited.
+
+To view the records even if there is no matching records on other table we can use left or right outer join.
+
+![image-20210826144744110](images/image-20210826144744110.png)
+
+- **Use:** Combine multiple relation using some common attribute and  also display all the tuples of the left relation even through there is no matching tuple in the right relation. 
+- If there are tuples in Left relation without any  matching tuple in the Right relation, then the Right  relation attributes of the resulting relation are treated as NULL.
+
+**Example**
+
+![image-20210826145240642](images/image-20210826145240642.png)
+
+When we perform left outer join on above relations (tables)
+
+![image-20210826145314553](images/image-20210826145314553.png)
+
+![image-20210826145326090](images/image-20210826145326090.png)
+
+# Right Outer Join
+
+![image-20210826145405196](images/image-20210826145405196.png)
+
+- **Use:** Combine multiple relation using some common attribute and  also display all the tuples of the right relation even through there is no matching tuple in the left relation. 
+- If there are tuples in right relation without any  matching tuple in the left relation, then the left  relation attributes of the resulting relation are treated as NULL.
+
+**Example**
+
+![image-20210826145450418](images/image-20210826145450418.png)
+
+When we perform right outer join on above relations (tables)
+
+![image-20210826145517208](images/image-20210826145517208.png)
+
+![image-20210826145526284](images/image-20210826145526284.png)
+
+# Full Outer Join
+
+![image-20210826145556090](images/image-20210826145556090.png)
+
+- **Use:** Display all the records from both relation even if there is no matching records on the either side.
+- If no matching records found on either side then NULL value is used for such records.
+- Basically full outer join = left outer join + right outer join.
+
+**Example**
+
+![image-20210826145723737](images/image-20210826145723737.png)
+
+**Output of Full Outer join**
+
+![image-20210826145749295](images/image-20210826145749295.png)
+
+# Relational Calculus
+
+- Like relational algebra relational calculus is an abstract database language
+- Relational calculus and relational algebra can achieve same results.
+- In relational calculus queries are described as { | } with desired properties.
+- There are two flavours of relational calculus
+  - Tuple
+  - Domain
+
+## Tuple Relational Calculus
+
+- The tuple relational calculus is specified to select the tuples in a relation.
+- {t | P (t)}   or {t | condition (t)} -- this is also known as expression of relational calculus
+- Where t is the resulting tuples, P(t) is the condition used to fetch t.
+
+**Example 1**
+
+- {t | EMPLOYEE (t) and t.SALARY>10000}  
+- Reads as “set of all t such that t is an element of the relation EMPLOYEE and the SALARY attribute has value greater than 10000”
+- Implies that it selects the tuples from EMPLOYEE relation such that resulting employee tuples will have salary greater than 10000. It is example of selecting a range of values.
+
+**Example 2**
+
+- {t | EMPLOYEE (t) AND t.DEPT_ID = 10} 
+- this select all the tuples of employee name who work for Department 10.  
+
+- The variable which is used in the condition is called tuple variable. 
+- In above example t.SALARY and t.DEPT_ID are tuple variables. 
+
+## Domain Relational Calculus
+
+- In domain relational calculus, filtering variable uses the domain of attributes.
+- Domain relational calculus uses the same operators as tuple calculus. It uses logical connectives  Λ (AND), V (OR) and ! (not).
+- { a1, a2, a3, ..., an | P (a1, a2, a3, ... ,an)}
+- Where a1, a2 are attributesP stands for formula (condition) built by inner attributes
+
+**Example**
+
+- {< name, age > | < name, age > Є Student Λ age > 17}
+- Again, the above query will return the names and ages of the students in the table Student who are older than 17.
+
+# Aggregate Functions
+
+![image-20210826151408549](images/image-20210826151408549.png)
+
+- **Use:** It takes collection of values as input and returns a single value as output.
+- E.g. Sum, max, min, avg, count
+
+## Sum
+
+It finds the sum of values in particular column.
+
+**Example**
+
+![image-20210826151518287](images/image-20210826151518287.png)
+
+Find the sum of the salary of all employees
+
+![image-20210826151559353](images/image-20210826151559353.png)
+
+![image-20210826151908197](images/image-20210826151908197.png)
+
+## Max
+
+It is used to find the maximum value in particular column
+
+**Example**
+
+![image-20210826151951966](images/image-20210826151951966.png)
+
+Find the Maximum CPI and SPI from Student table.
+
+![image-20210826152103550](images/image-20210826152103550.png)
+
+![image-20210826152137134](images/image-20210826152137134.png)
+
+## Min
+
+It is used to find the minimum value in particular column
+
+**Example**
+
+![image-20210826151951966](images/image-20210826151951966.png)
+
+Find the Minimum CPI and SPI from Student table.
+
+![image-20210826152246117](images/image-20210826152246117.png)
+
+![image-20210826152323418](images/image-20210826152323418.png)
+
+## Avg
+
+It is used to find the average value of particular column
+
+**Example**
+
+![image-20210826151951966](images/image-20210826151951966.png)
+
+Find the Average CPI and SPI from Student table.
+
+![image-20210826152611872](images/image-20210826152611872.png)
+
+![image-20210826152641043](images/image-20210826152641043.png)
+
+## Count
+
+It is used to count the rows or number of values in particular column. 
+
+> Note it only counts the values, if the column has NULL value it is not counted.
+
+**Example**
+
+![image-20210826151951966](images/image-20210826151951966.png)
+
+Find the number of Students
+
+![image-20210826153122240](images/image-20210826153122240.png)
+
+![image-20210826153138428](images/image-20210826153138428.png)
+
+Here count(*) will always give the number of rows in a table.
+
+count(column_name) will give the number of values in that particular row. If column has NULL values its value will be less than count(*) as NULL values are not counted.
