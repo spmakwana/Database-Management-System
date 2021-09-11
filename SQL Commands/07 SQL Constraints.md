@@ -13,6 +13,18 @@
   - [Apply PRIMARY KEY Constraint when creating a new table](#apply-primary-key-constraint-when-creating-a-new-table)
   - [Apply PRIMARY KEY constraint on already created table](#apply-primary-key-constraint-on-already-created-table)
   - [Remove PRIMARY KEY constraint](#remove-primary-key-constraint)
+- [FOREIGN KEY Constraint](#foreign-key-constraint)
+  - [Apply FOREIGN KEY Constraint when creating a new table](#apply-foreign-key-constraint-when-creating-a-new-table)
+  - [Apply FOREIGN KEY constraint on already created table](#apply-foreign-key-constraint-on-already-created-table)
+  - [Remove FOREIGN KEY constraint](#remove-foreign-key-constraint)
+- [CHECK Constraint](#check-constraint)
+  - [Apply CHECK Constraint when creating a new table](#apply-check-constraint-when-creating-a-new-table)
+  - [Apply CHECK constraint on already created table](#apply-check-constraint-on-already-created-table)
+  - [Remove CHECK constraint](#remove-check-constraint)
+- [DEFAULT Constraint](#default-constraint)
+  - [Apply DEFAULT Constraint when creating a new table](#apply-default-constraint-when-creating-a-new-table)
+  - [Apply DEFAULT constraint on already created table](#apply-default-constraint-on-already-created-table)
+  - [Remove CHECK constraint](#remove-check-constraint)
 
 # SQL Constraints
 
@@ -29,7 +41,6 @@ Below are various constraints available in SQL
 - FOREIGN KEY
 - CHECK
 - DEFAULT
-- CREATE INDEX
 
 # NOT NULL Constraint
 
@@ -253,7 +264,7 @@ CREATE TABLE table_name
 (
     column_name DATATYPE(SIZE) PRIMARY KEY,
     column_name DATATYPE(SIZE),
-...
+	...
 )
 
 -- Apply PRIMARY KEY to group of columns
@@ -271,13 +282,13 @@ CREATE TABLE table_name
 **Example**
 
 ```sql
-    CREATE TABLE product
-    (
-        product_id varchar2(5) PRIMARY KEY
-        name VARCHAR2(50),
-    	price NUMBER(10,2),
-    	description VARCHAR2(150)
-    )
+CREATE TABLE product
+(
+    product_id varchar2(5) PRIMARY KEY,
+    name VARCHAR2(50),
+  	price NUMBER(10,2),
+	description VARCHAR2(150)
+)
 ```
 
 ## Apply PRIMARY KEY constraint on already created table
@@ -299,6 +310,7 @@ ADD CONSTRAINT constraint_name PRIMARY_KEY (column_name)
 **Example**
 
 ```sql
+-- PRIMARY KEY without constraint name
 ALTER TABLE product
 ADD PRIMARY KEY (product_id)
 
@@ -325,3 +337,272 @@ ALTER TABLE product
 DROP CONSTRAINT PK_Product_Id
 ```
 
+# FOREIGN KEY Constraint
+
+- Foreign key is a column or group of column in one table, that refers to the primary key column(s) in another table.
+- Foreign key is generally used to establish a relationship between two tables.
+- Table with foreign key is known as child table and table with primary key is known as parent table.
+- Foreign key is used so it can prevent invalid data in child table which can destroy the link between two tables.
+- Foreign key ensures that we can not enter a value in foreign key column which is not available in primary key column of another table which foreign key column points to.
+
+## Apply FOREIGN KEY Constraint when creating a new table
+
+Below syntax can be used to apply FOREIGN KEY constraint when creating a new table.
+
+**Syntax**
+
+```SQL
+-- Apply FOREIGN KEY to single column
+CREATE TABLE table_name
+(
+    column_name DATATYPE(SIZE),
+    column_name DATATYPE(SIZE),
+	...
+    FOREIGN KEY (column_name) REFERENCES table_name(column_name)
+)
+
+```
+
+**Example**
+
+```sql
+CREATE TABLE product
+(
+    product_id varchar2(5) PRIMARY KEY,
+    name VARCHAR2(50),
+    price NUMBER(10,2),
+    description VARCHAR2(150)
+)
+
+CREATE TABLE order
+(
+    order_no NUMBER(5) PRIMARY KEY,
+    order_date DATE,
+    product_id VARCHAR2(5),
+    quantity number(2),
+    FOREIGN KEY (product_id) REFERENCES product(product_id)
+)
+    
+```
+
+## Apply FOREIGN KEY constraint on already created table
+
+Below syntax can be used to apply FOREIGN KEY Constraint on already created table.
+
+**Syntax**
+
+```sql
+-- Add FOREIGN  KEY Without giving a constraint name
+ALTER TABLE table_name
+ADD FOREIGN KEY (column_name) REFERENCES table_name(column_name)
+
+-- Add FOREIGN  KEY and also to give constraint a name
+ALTER TABLE table_name
+ADD CONSTRAINT constraint_name
+FOREIGN KEY (column_name) REFERENCES table_name(column_name)
+```
+
+**Example**
+
+```sql
+-- FOREIGN KEY without constraint name
+ALTER TABLE order
+ADD FOREIGN KEY (product_id) REFERENCES product(product_id)
+
+-- FOREIGN KEY with constraint name
+ALTER TABLE order
+ADD CONSTRAINT FK_Product_Id 
+FOREIGN KEY (product_id) REFERENCES product(product_id)
+```
+
+## Remove FOREIGN KEY constraint
+
+Below command can be used to drop FOREIGN KEY constraint
+
+**Syntax**
+
+```sql
+ALTER TABLE table_name
+DROP CONSTRAINT constraint_name
+```
+
+**Example**
+
+```sql
+ALTER TABLE product
+DROP CONSTRAINT FK_Product_Id
+```
+
+# CHECK Constraint
+
+- This constraint is defined on a column of the table. 
+- The constraint can be applied for a single column or a group of columns.
+- It Limits the data values of column to a specific set of values based on condition. 
+- It is applied for data validation, so only data which satisfy the given condition can be inserted. If the data does not meet the criteria the operation is aborted and the data will not be inserted into the table.
+- Example
+  - E.g. Amount must be greater than 500. 
+  - E.g. Marks must be between 0 and 100
+  - E.g. Gender must be Male, Female or Transgender.
+
+## Apply CHECK Constraint when creating a new table
+
+Below syntax can be used to apply CHECK constraint when creating a new table.
+
+**Syntax**
+
+```SQL
+-- Apply CHECK constraint without giving a constraint name
+CREATE TABLE table_name
+(
+    column_name DATATYPE(SIZE) CHECK (CONDITION),
+    column_name DATATYPE(SIZE) CHECK (CONDITION),
+	...
+)
+
+-- Apply CHECK constriant and difine a constraint name
+CREATE TABLE table_name
+(
+    column_name DATATYPE(SIZE),
+    column_name DATATYPE(SIZE),
+	...
+    CONSTRAINT constraint_name CHECK (CONDITION)
+)
+```
+
+**Example**
+
+```sql
+-- Apply CHECK constraint without giving a constraint name
+CREATE TABLE product
+(
+    product_id varchar2(5) PRIMARY KEY,
+    name VARCHAR2(50),
+    price NUMBER(10,2) CHECK (price >= 0),
+    description VARCHAR2(150)
+)
+
+-- Apply CHECK constriant and also give constraint a name
+CREATE TABLE product
+(
+    product_id varchar2(5) PRIMARY KEY,
+    name VARCHAR2(50),
+    price NUMBER(10,2),
+    description VARCHAR2(150)
+    CONSTRAINT Price_Check CHECK(price >= 0)
+)
+```
+
+## Apply CHECK constraint on already created table
+
+Below syntax can be used to apply CHECK Constraint on already created table.
+
+**Syntax**
+
+```sql
+-- Add CHECK Without giving a constraint name
+ALTER TABLE table_name
+ADD CHECK (condition)
+
+-- Add CHECK and also to give constraint a name
+ALTER TABLE table_name
+ADD CONSTRAINT constraint_name
+CHECK (condition)
+```
+
+**Example**
+
+```sql
+-- Add CHECK Without giving a constraint name
+ALTER TABLE product
+ADD CHECK (price >= 0)
+
+-- Add CHECK and also to give constraint a name
+ALTER TABLE product
+ADD CONSTRAINT Price_Check
+CHECK (price >= 0)
+```
+
+## Remove CHECK constraint
+
+Below command can be used to drop CHECK constraint
+
+**Syntax**
+
+```sql
+ALTER TABLE table_name
+DROP CONSTRAINT constraint_name
+```
+
+**Example**
+
+```sql
+ALTER TABLE product
+DROP CONSTRAINT Price_Check
+```
+
+# DEFAULT Constraint
+
+DEFAULT Constraint is used to set a default value of a column. If value is not specified when inserting the record then default value is inserted in the specified column.
+
+## Apply DEFAULT Constraint when creating a new table
+
+Below syntax can be used to apply DEFAULT constraint when creating a new table.
+
+**Syntax**
+
+```SQL
+CREATE TABLE table_name
+(
+    column_name DATATYPE(SIZE) DEFAULT 'value',
+    column_name DATATYPE(SIZE) DEFAULT 'value',
+	...
+)
+```
+
+**Example**
+
+```sql
+CREATE TABLE product
+(
+    product_id varchar2(5) PRIMARY KEY,
+    name VARCHAR2(50),
+    price NUMBER(10,2) DEFAULT 0,
+    description VARCHAR2(150) DEFAULT 'No description is available'
+)
+```
+
+## Apply DEFAULT constraint on already created table
+
+Below syntax can be used to apply DEFAULT Constraint on already created table.
+
+**Syntax**
+
+```sql
+ALTER TABLE table_name
+MODIFY column_name DEFAULT 'value'
+```
+
+**Example**
+
+```sql
+ALTER TABLE product
+MODIFY price DEFAULT 0
+```
+
+## Remove CHECK constraint
+
+Below command can be used to drop CHECK constraint
+
+**Syntax**
+
+```sql
+ALTER TABLE table_name
+ALTER COLUMN column_name DROP DEFAULT
+```
+
+**Example**
+
+```sql
+ALTER TABLE product
+ALTER COLUMN price DROP DEFAULT
+```
