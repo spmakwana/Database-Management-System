@@ -119,8 +119,8 @@ Can not enter duplicate value in attribute in which UNIQUE constraint is applied
 ```sql
 CREATE TABLE table_name
 (
-    column_name DATATYPE(SIZE) NOT NULL,
-    column_name DATATYPE(SIZE) NOT NULL,
+    column_name DATATYPE(SIZE) UNIQUE,
+    column_name DATATYPE(SIZE) UNIQUE,
     ...
 )
 ```
