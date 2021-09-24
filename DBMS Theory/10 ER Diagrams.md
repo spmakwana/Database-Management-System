@@ -1,3 +1,22 @@
+# Table of contents
+
+- [Entity Relationship Diagram](#entity-relationship-diagram)
+- [Entity and Attributes](#entity-and-attributes)
+  - [Types of Attributes](#types-of-attributes)
+- [Relationship between entities](#relationship-between-entities)
+- [Mapping Cardinalities](#mapping-cardinalities)
+  - [One to One](#one-to-one)
+  - [One to Many](#one-to-many)
+  - [Many to One](#many-to-one)
+  - [Many to Many](#many-to-many)
+- [Participation Constraints](#participation-constraints)
+  - [Total Participation](#total-participation)
+  - [Partial Participation](#partial-participation)
+- [Extended E-R Diagram](#extended-e-r-diagram)
+  - [Specialization](#specialization)
+  - [Generalization](#generalization)
+- [ER Diagram Cheatsheet](#er-diagram-cheatsheet)
+
 # Entity Relationship Diagram
 
 - Stands for Entity-Relationship diagram.
@@ -61,6 +80,14 @@ E.g. Value of Age attribute can be derived from Date of Birth attribute, so age 
 Derived attributes are represented using dotted line oval.
 
 ![image-20210923153414726](images/image-20210923153414726.png)
+
+### Primary Key Attribute
+
+Attribute which will be used to uniquely identify data (records) of an entity is known as primary key attribute. 
+
+Primary key attribute is represented as underline under the attribute name.
+
+![image-20210924082055256](images/image-20210924082055256.png)
 
 ### Example of Entity and its attributes.
 
@@ -156,3 +183,62 @@ In many to many cardinality, each data of entity A can be associated with zero, 
 Here each student can studies in multiple classroom, so each data of student can be mapped to multiple data on classroom entity. And also each classroom can be allocated to different students, so each data of classroom also can be associated with multiple student data of student entity.
 
 Many to many mapping is represented with simple lines on both side when representing relationship.
+
+# Participation Constraints
+
+- It specifies the participation of an entity set in a relationship set.
+- There are two types participation constraints:
+  - Total Participation
+  - Partial Participation
+
+## Total Participation
+
+In total participation each data (records) of entity must be compulsory associated with at least one data (records) of other entity  participating in the relationship.
+
+Total participation is denoted by double line between entity and relationship.
+
+## Partial Participation
+
+In partial participation for each data (records) of entity is not compulsory to be associated with data (records) of other entity participating in the relationship. In other words, some data of and entity many not be associated with any data of other entity.
+
+Partial participation is denoted by single line between entity and relationship.
+
+**Example**
+
+![image-20210924083158159](images/image-20210924083158159.png)
+
+Here in above example, each loan data must be associated with customer, because all the loan is taken by some customer, so it is total participation and is denoted using double lines. On the other side, It is possible that some customer may not have taken the loan, so some data of customer entity may not be associated with loan entity. So it is partial participation and is denoted using single line.
+
+# Extended E-R Diagram
+
+## Specialization
+
+- The process of creating sub-groups within an entity is called specialization.
+
+- Top-Down design process; designate subgroupings within an entity set that are distinctive from other entities in the set.
+
+- The process of taking a subset of higher level entity set to form a lower level entity set.
+
+- Uses a triangle component labeled as “ISA”
+
+**Example**
+
+![image-20210924084656391](images/image-20210924084656391.png)
+
+## Generalization
+
+- The process of creating a main group from different entities is called generalization.
+
+- Bottom-Up design process; combine a number of entity sets that share the same features into a higher-level entity set.
+
+- The process of combining two or more low level entity sets to generate high level entity set.
+
+- Uses a triangle component labeled as “ISA”
+
+**Example**
+
+![image-20210924084656391](images/image-20210924084656391.png)
+
+# ER Diagram Cheatsheet
+
+![E R Diagram CheatSheet](images/E%20R%20Diagram%20CheatSheet.jpg)
