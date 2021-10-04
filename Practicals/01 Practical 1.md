@@ -38,12 +38,12 @@ insert into account (acc_no, name, city, balance, loan_taken) values ('A005', 'S
 **Solution**
 
 ```sql
-create table account
+create table loan
 (
     loan_no varchar2(5),
     acc_no varchar2(5),
     loan_amt number(10,2),
-    interest_rate number(5,2)
+    interest_rate number(5,2),
     loan_date date,
     remaining_loan number (20,2)
 )
